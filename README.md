@@ -1,10 +1,28 @@
+# vue-cli
+
 ## Vue-cli 配置详解
     最近想升级一下技术架构，发现新版本的脚手架和之前的区别有点大。
     很多之前的配置要进行迁移。
     基于此，在这里做下配置说明以及配置一些自定义的功能实现。
 
 #### 直接获取：
-    以下内容可能过于简单，请选择性查看。最终版本位于 master 分支。
+    以下内容可能过于简单，请选择性查看。
+    全功能最终版本位于 master 分支，包括：
+        1. 单入口，多入口配置
+        2. 单元测试
+        3. 外部文件引入
+    单页面模板位于 fu-spa 分支
+    多页面模板位于 fu-mpa 分支
+    
+### 如何运行：
+```
+$ npm install
+$ npm run serve  //运行本地服务
+$ npm run build  //执行构建任务
+$ npm run test:unit  //执行单元测试
+$ npm run test:e2e  //执行端测试
+$ npm run lint  //运行代码错误检查
+```
 
 ### 环境：
 ```
@@ -138,41 +156,24 @@ Save this as a preset for future projects? (y/N)  //Y
 配置起名
 
 至此安装完毕，等待项目穿件完成。下一步我们尝试下各种配置.
+新版本与旧版本的区别在移除了build目录，集成到了vue/cli-service下
+我之前的项目中有对webpack的打包优化，有对测试服务的修改。
+换到新版本后需要重新考虑解决方案了。
+
+
+### SPA单页面应用
+#### 1.router实现
+#### 2.页面过渡动画实现
+#### 3.接口代理
+#### 4.三方文件引入
+#### 5.自定义构建钩子
+    
+### MPA多页面应用
+#### 1.多入口实现
+#### 2.单页面多页面混合
+#### 3.接口代理
+#### 4.三方文件引入
+#### 5.自定义构建钩子
 
 
 
-
-# vue-cli
-
-## Project setup
-```
-npm install
-```
-
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Run your end-to-end tests
-```
-npm run test:e2e
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
