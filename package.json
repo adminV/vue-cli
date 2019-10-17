@@ -1,7 +1,9 @@
 {
-  "name": "my-project1",
-  "version": "0.1.0",
+  "name": "vue-cli",
+  "version": "1.0.0",
+  "author": "xiaoqiang",
   "private": true,
+  "description": "vue/cli4.0 实践",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
