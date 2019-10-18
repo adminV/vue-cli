@@ -52,15 +52,15 @@ v12.12.0
 #### step2：
 ```
 ? Check the features needed for your project:
- ◉ Babel       
+ ◉ Babel       //ES6转ES5
  ◯ TypeScript
- ◉ Progressive Web App (PWA) Support
- ◉ Router
- ◉ Vuex
- ◉ CSS Pre-processors
- ◉ Linter / Formatter
- ◉ Unit Testing
-❯◉ E2E Testing
+ ◉ Progressive Web App (PWA) Support  //PWA
+ ◉ Router   //vue-router
+ ◉ Vuex    //单页面应用的状态管理模块
+ ◉ CSS Pre-processors  //CSS预处理（less/sass）
+ ◉ Linter / Formatter    //代码检查
+ ◉ Unit Testing    //单元测试
+❯◉ E2E Testing    //端对端测试
 ```
 我们在此勾选所有插件，做一个功能最全的模板项目
 当然你也可以在项目创建后，使用 vue add eslint 来补充插件
@@ -155,10 +155,24 @@ Save this as a preset for future projects? (y/N)  //Y
 ```
 配置起名
 
-至此安装完毕，等待项目穿件完成。下一步我们尝试下各种配置.
+至此安装完毕，等待项目创建完成。
 新版本与旧版本的区别在移除了build目录，集成到了vue/cli-service下
 我之前的项目中有对webpack的打包优化，有对测试服务的修改。
 换到新版本后需要重新考虑解决方案了。
+
+
+先看下目录结构：
+-public //网站根目录，可以放一些公共资源目录，相当于老版本的static目录，build时所有文件会被copy到dist目录下。
+你可以将一些版本不会发生变化的文件直接放到此目录下。
+例如：我们想在页面中引用echarts库，可以这么操作：
+```
+1. 在public目录下新建static目录
+2. copy 文件 echarts-all.js 到 static 目录下
+3. 在index.html中引用：<script type="text/javascript" src="/static/echarts-all.js" ></script>
+```
+
+
+
 
 
 ### SPA单页面应用
