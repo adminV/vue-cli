@@ -231,6 +231,24 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
    此文件为PostCSS配置文件。
 
 
+   了解完了目录结构之后我们要开始一步步对各个配置进行优化了。
+第一步我们先对公共的配置进行定制化，下面我会列出对公告配置文件的修改，
+以及为什么要这样修改。
+
+### babel.config.js配置优化
+
+### .browserslistrc配置优化
+
+### .eslintrc.js配置优化
+
+### babel.config.js配置优化
+
+### cypress.json配置优化
+
+### jest.config.js配置优化
+
+### postcss.config.js配置优化
+
 
 
 
