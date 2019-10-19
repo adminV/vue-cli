@@ -186,7 +186,62 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
    前端路由目录， 具体的路由配置写到index.js中，详细配置放到后面讲
    
 #### src/store
-   vuex目录，
+   vuex目录，公众号里有一篇关于vuex的使用介绍，有兴趣的同学可以关注"js前端架构"进行查看
+   
+#### src/views
+   页面文件目录，用来存放路由对应的vue文件。
+   
+#### src/App.vue
+   在单页面应用的情况下，App.vue 为 index页面对应的Vue文件
+   
+#### src/main.js
+   全局入口配置，在此文件中初始化全局的Vue示例，以及Router，vuex的引入
+
+#### src/registerServiceWorker.js
+   PWA配置，它需要与manifest.json文件搭配使用。 具体的使用方式我们在后面单独讲解。
+   
+#### tests/e2e
+   此目录下为端对端测试代码，可以实现页面的自动化UI测试功能。
+
+#### tests/test
+   此目录下为Jest单元测试代码。
+   
+#### .browserslistrc
+   此文件为CSS编译时的浏览器兼容配置。具体配置参考：https://github.com/browserslist/browserslist
+
+#### .eslintrc.js
+   此文件为代码格式化检查配置，具体配置参考：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint
+
+#### .gitignore
+   此文件为git文件忽略配置，用来忽略不想加入版本控制的文件。
+   
+#### babel.config.js
+   此文件为 babel 代码转换的配置，具体配置参考：https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist
+  
+#### cypress.json
+   此文件为端对端测试配置文件，具体配置参考：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress
+   
+#### jest.config.js
+   此文件为Jest单元测试配置文件，具体配置参考：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-unit-jest
+   
+#### package.json、package-lock.json
+   npm包管理文件，管理项目依赖包。
+   
+#### postcss.config.js
+   此文件为PostCSS配置文件。
+
+
+
+
+
+
+    
+
+   
+   
+   
+
+   
 
 ### SPA单页面应用
 #### 1.router实现
