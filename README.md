@@ -162,7 +162,8 @@ Save this as a preset for future projects? (y/N)  //Y
 
 
 先看下目录结构：
--public //网站根目录，可以放一些公共资源目录，相当于老版本的static目录，build时所有文件会被copy到dist目录下。
+#### public 
+   网站根目录，可以放一些公共资源目录，相当于老版本的static目录，build时所有文件会被copy到dist目录下。
 你可以将一些版本不会发生变化的文件直接放到此目录下。
 例如：我们想在页面中引用echarts库，可以这么操作：
 ```
@@ -171,9 +172,21 @@ Save this as a preset for future projects? (y/N)  //Y
 3. 在index.html中引用：<script type="text/javascript" src="/static/echarts-all.js" ></script>
 ```
 
+#### src/assets
+   与public目录类似，也是用来存放静态资源的目录。
+二者的区别是public目录下文件只会简单的被copy到dist目录。
+assets目录下文件会经过webpack处理，压缩合并或者图片转base。
+所以，不需要构建的文件放到public下，例如三方库，robots文件，小程序/公众号的验证文件等。
+需要参与构建过程的文件要放到assets下，例如vue中引用的图片资源
 
-
-
+#### src/components
+   组件目录，没有特殊含义，用来区分文件夹功能。可以将一些自定义的组件放到此目录下。
+   
+#### src/router
+   前端路由目录， 具体的路由配置写到index.js中，详细配置放到后面讲
+   
+#### src/store
+   vuex目录，
 
 ### SPA单页面应用
 #### 1.router实现
