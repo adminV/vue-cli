@@ -243,11 +243,11 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
 
 ### babel.config.js配置定制
 
-### cypress.json配置优化
+### cypress.json配置定制
 
-### jest.config.js配置优化
+### jest.config.js配置定制
 
-### postcss.config.js配置优化
+### postcss.config.js配置定制
 
 
 
