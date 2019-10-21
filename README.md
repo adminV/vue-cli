@@ -208,7 +208,8 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
    
 #### .browserslistrc
    此文件为CSS编译时的浏览器兼容配置。具体配置参考：https://github.com/browserslist/browserslist
-
+   为了体现通用模板，我们考虑有可能在PC端使用此模板，所以增加IE的版本支持，从IE9开始
+   增加了配置： not ie <= 8
 #### .eslintrc.js
    此文件为代码格式化检查配置，具体配置参考：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint
 
@@ -216,7 +217,7 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
    此文件为git文件忽略配置，用来忽略不想加入版本控制的文件。
    
 #### babel.config.js
-   此文件为 babel 代码转换的配置，具体配置参考：https://cli.vuejs.org/zh/guide/browser-compatibility.html#browserslist
+   此文件为 babel 代码转换的配置，具体配置参考：https://cli.vuejs.org/zh/guide/browser-compatibility.html#polyfill
   
 #### cypress.json
    此文件为端对端测试配置文件，具体配置参考：https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-e2e-cypress
@@ -231,33 +232,7 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
    此文件为PostCSS配置文件。
 
 
-   了解完了目录结构之后我们要开始一步步对各个配置进行优化了。
-第一步我们先对公共的配置进行定制化，下面我会列出对公告配置文件的修改，
-以及为什么要这样修改。
-
-### babel.config.js配置定制
-
-### .browserslistrc配置定制
-
-### .eslintrc.js配置定制
-
-### babel.config.js配置定制
-
-### cypress.json配置定制
-
-### jest.config.js配置定制
-
-### postcss.config.js配置定制
-
-
-
-
-
-    
-
-   
-   
-   
+   了解完了目录结构之后我们要开始实现一些通用功能了
 
    
 
