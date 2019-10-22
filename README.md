@@ -231,10 +231,9 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
 #### postcss.config.js
    此文件为PostCSS配置文件。
 
-
    了解完了目录结构之后我们要开始实现一些通用功能了
 
-   
+
 
 ### SPA单页面应用
 #### 1.router实现
