@@ -68,9 +68,9 @@ v12.12.0
 
 #### step3：
 ```
-Use history mode for router? (Requires proper server setup for index fallback in production)（Y/n） //输入Y
+Use history mode for router? (Requires proper server setup for index fallback in production)（Y/n） //输入N
 ```
-是否使用 history 模式的前端路由， Y
+是否使用 history 模式的前端路由， N 不使用
 
 
 #### step4：
