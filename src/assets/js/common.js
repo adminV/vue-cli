@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import axiosConfig from './axiosConfig'
 
 /**
  * 公共样式、主题样式引入位置
@@ -27,5 +28,10 @@ const Util = {
     return (obj !== 0 || obj !== "0") && (obj === null || obj === undefined || obj === "" || obj === "null" || typeof obj === "undefined");
   }
 };
+
+/**
+ * 导入axios配置
+ * */
+Object.assign(Util, axiosConfig);
 
 Object.assign(Vue.prototype, Util);

@@ -249,12 +249,16 @@ const FastClick = require('fastclick');
 FastClick.attach(document.body);
 ```
 
+### axios封装
+  此模板使用 axios 进行页面请求，axios请求配置文件位于 /src/assets/js/axiosConfig.js
+可在此文件内修改请求头，状态码处理，公共方法暴露等操作。
+
 
 ### SPA单页面应用
-#### 1.router实现
-#### 2.页面过渡动画实现
+#### 1.router实现     √ done
+#### 2.页面过渡动画实现     √ done
 #### 3.接口代理
-#### 4.三方文件引入
+#### 4.三方文件引入      
 #### 5.自定义构建钩子
     
 ### MPA多页面应用
