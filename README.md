@@ -231,9 +231,23 @@ assets目录下文件会经过webpack处理，压缩合并或者图片转base。
 #### postcss.config.js
    此文件为PostCSS配置文件。
 
-   了解完了目录结构之后我们要开始实现一些通用功能了
+   了解完了目录结构之后我们要开始实现一些通用功能了,比如一些公共的方法，公共的插件。
+我们把这些配置放到 assets/js/common.js 文件中，
+还有一些公共的样式文件，我们把它放到 assets/style 目录下。
+assets/style/base.less 文件存放顶层样式，例如 cssReset
 
-### 1. 路由切换动画
+### 1. 配置公共样式引入
+  在 assets/js/common.js 文件中 import base.less文件。
+按照约定，base.less 只存放全局样式。目前该文件中包含了全局cssReset以及router切换动画
+  
+### 2. 安装 FastClick
+   因为移动设备上的浏览器默认会在用户点击屏幕大约延迟300毫秒后才会触发点击事件，
+为了能够立即响应用户的点击事件，我们引入 FastClick。
+在 common.js 中的公共点击模块中增加以下代码：
+```
+const FastClick = require('fastclick');
+FastClick.attach(document.body);
+```
 
 
 ### SPA单页面应用
