@@ -253,7 +253,13 @@ FastClick.attach(document.body);
   此模板使用 axios 进行页面请求，axios请求配置文件位于 /src/assets/js/axiosConfig.js
 可在此文件内修改请求头，状态码处理，接口暴露修改等操作。
 
-
+### 4. 请求转发、代理配置
+   我们在开发过程中需要对接后端接口，通常会面临跨域问题。该问题我们需要借助 vue.config.js 文件。
+官网是这么介绍 vue.config.js：
+    vue.config.js 是一个可选的配置文件，
+    如果项目的 (和 package.json 同级的) 根目录中存在这个文件，
+    那么它会被 @vue/cli-service 自动加载。
+    你也可以使用 package.json 中的 vue 字段，但是注意这种写法需要你严格遵照 JSON 的格式来写。
 
 
 ### SPA单页面应用
