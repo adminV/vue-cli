@@ -265,7 +265,7 @@ FastClick.attach(document.body);
 ### SPA单页面应用
 #### 1.router实现     √ done
 #### 2.页面过渡动画实现     √ done
-#### 3.接口代理
+#### 3.接口代理       √ done
 #### 4.三方文件引入      
 #### 5.自定义构建钩子
     
