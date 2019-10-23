@@ -261,6 +261,11 @@ FastClick.attach(document.body);
     那么它会被 @vue/cli-service 自动加载。
     你也可以使用 package.json 中的 vue 字段，但是注意这种写法需要你严格遵照 JSON 的格式来写。
 
+### 5. cdn资源域名配置
+   默认情况下执行npm run build 后资源路径为相对路径，但在实际项目中，资源一般会放在CDN节点上。
+因此我们在 vue.config.js 中配置 publicPath 为对应的资源路径即可实现
+
+
 
 ### SPA单页面应用
 #### 1.router实现     √ done
