@@ -5,7 +5,7 @@ function InsertHtmlPlugin(options) {
 
 InsertHtmlPlugin.prototype.apply = function (compiler) {
   compiler.hooks.compilation.tap('InsertHtmlPlugin', function(compilation){
-    compilation.hooks.htmlWebpackPluginBeforeHtmlProcessing.tapAsync('InsertHtmlPlugin', (data, callback) => {
+    compilation.hooks['htmlWebpackPluginBeforeHtmlProcessing'].tapAsync('InsertHtmlPlugin', (data, callback) => {
       data.html =  data.html.replace('</head>',
         `<script>
          var _hmt = _hmt || [];
@@ -16,8 +16,8 @@ InsertHtmlPlugin.prototype.apply = function (compiler) {
             s.parentNode.insertBefore(hm, s);
           })();
           </script></head>`);
-      callback(null, data)
-    })
+      callback(null, data);
+    });
   })
 };
 
