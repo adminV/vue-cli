@@ -265,6 +265,14 @@ FastClick.attach(document.body);
    默认情况下执行npm run build 后资源路径为相对路径，但在实际项目中，资源一般会放在CDN节点上。
 因此我们在 vue.config.js 中配置 publicPath 为对应的资源路径即可实现
 
+### 6. 第三方文件引入
+   在项目开发中，我们可能需要引入一些第三方插件，例如异常采集，百度统计文件等。
+我们需要有一个配置用来在构建前插入第三方插件。在老版本中，我是通过直接修改webpack配置的方式实现此功能。
+vue-cli 的 4.0版本 较于 2.0 移除了build目录。新版本中需要在 vue.config.js 文件中增加 configureWebpack 来进行配置。
+具体实现的原理是我们要在 html-webpack-plugin 执行过程中对html内容进行修改，将自定义内容注入到打包结果里。
+新增一个webpack插件，修改 afterTemplateExecution HOCK 来实现html内容修改。
+src/assets/js/insertHtmlPlugin.js    为实现结果，以插入百度统计代码为例。
+
 
 
 ### SPA单页面应用

@@ -1,3 +1,6 @@
+//html 插入文件插件
+const InsertHtmlPlugin = require('./src/assets/js/insertHtmlPlugin');
+
 // 接口mock地址
 const mockPath = "http://rap.d.renrenauto.com/";
 
@@ -22,7 +25,13 @@ const proxyOptions = {
 };
 
 module.exports = {
+  productionSourceMap: false,
   publicPath: publicPath,  //CDN节点地址
+  configureWebpack: {
+    plugins: [
+      new InsertHtmlPlugin()
+    ]
+  },
   devServer: {
     overlay: {    //显示编译错误和警告
       warnings: true,
