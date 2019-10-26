@@ -273,7 +273,7 @@ vue-cli 的 4.0版本 较于 2.0 移除了build目录。新版本中需要在 vu
 新增一个webpack插件，修改 afterTemplateExecution HOCK 来实现html内容修改。
 src/assets/js/insertHtmlPlugin.js    为实现结果，以插入百度统计代码为例。
 
-### 7. 
+
 
 
 ### SPA单页面应用
