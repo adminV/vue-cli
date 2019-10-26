@@ -273,6 +273,14 @@ vue-cli 的 4.0版本 较于 2.0 移除了build目录。新版本中需要在 vu
 新增一个webpack插件，修改 afterTemplateExecution HOCK 来实现html内容修改。
 src/assets/js/insertHtmlPlugin.js    为实现结果，以插入百度统计代码为例。
 
+### 7. 移动端适配方案
+   移动端适配我们选择rem，作为通用脚手架，可能用来做移动端，也可能做PC端。关于项目的兼容性也要做考虑。
+看了一下《如何在Vue项目中使用vw实现移动端适配》发现配置之复杂，需要组合多个插件。
+所以我抛弃了 vw方案 与 px2rem-loader方案。还是保险起见使用 rem 布局方案。
+之后有机会在新项目中可以试一下。
+关于rem，开始有考虑过 media 媒体查询，但是实际使用时发现也存在部分设备的不兼容。所以该方案也被放弃。
+最终决定通过修改淘宝 flexible 方案来实现，顺便可以支持大屏幕适配以及移动端适配。
+rem 通过webpack plugin 的方式注入页面，与百度统计代码注入方式相同。
 
 
 
@@ -282,6 +290,7 @@ src/assets/js/insertHtmlPlugin.js    为实现结果，以插入百度统计代�
 #### 3.接口代理       √ done
 #### 4.三方文件引入      √ done
 #### 5.自定义构建钩子   √ done
+#### 6.移动端适配   √ done
     
 ### MPA多页面应用
 #### 1.多入口实现
@@ -289,6 +298,7 @@ src/assets/js/insertHtmlPlugin.js    为实现结果，以插入百度统计代�
 #### 3.接口代理         √ done
 #### 4.三方文件引入     √ done
 #### 5.自定义构建钩子   √ done
+#### 6.移动端适配   √ done
 
 
 
