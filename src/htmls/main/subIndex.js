@@ -1,8 +1,8 @@
 import Vue from 'vue'
-import App from '../pages/index.vue'
+import App from '../pages/subIndex.vue'
 import '../pwa/registerServiceWorker'
-import router from '../router/index.js'
-import store from '../store/index.js'
+import router from '../router/subIndex.js'
+import store from '../store/subIndex.js'
 require("@/assets/js/common");
 
 Vue.config.productionTip = false;
