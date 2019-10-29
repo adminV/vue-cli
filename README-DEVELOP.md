@@ -23,14 +23,12 @@ const productList = new Array();
 const MAX_COUNT = 10
 const URL = 'https://www.cupshe.com/'
 ```
-
 ##### 1.3 组件命名规范
 驼峰式命名
 ```
 bannerCard
 noticeCard
 ```
-
 ##### 1.4 方法命名规范
 匈牙利式命名，统一使用动词或者动词+名词形式
 ```
@@ -93,7 +91,6 @@ abort 放弃 / quit 离开
 obsolete 废弃 / depreciate 废旧,
 collect 收集 / aggregate 聚集
 ```
-
 #### 2. 注释规范
 以下情况必须进行注释
 1. 公共组件使用说明
@@ -178,8 +175,7 @@ export default {
 </style>
 ```
 
-
-### 开发规范：
+### 二. 开发规范：
 #### 1. v-for 循环必须加上 key 属性，在整个 for 循环中 key 需要唯一
 ```
 <ul>
@@ -189,7 +185,10 @@ export default {
 </ul>
 ```
 
-#### 2. 
+#### 2. 标签语义化，切忌清一色的 div 元素
+列表可以使用 ul li，文字使用 p 标签，标题使用 h* 标签，等等。
+虽然 HTML5 推出了语义化的标签，但是它们还有很多兼容性问题，在不支持的浏览器导致布局错乱。
+所以，不建议在生产环境中使用：section，aside，header，footer，article，等 HTML5 布局标签。
 
 ### 样式规范： 
 统一使用"-"连字符
@@ -203,7 +202,6 @@ export default {
 功能（function）（.f-）；
 皮肤（skin）（.s-）；
 状态（.z-）。
-
 
 ### 代码提交规范：
 #### 1. commit message 
