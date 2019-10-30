@@ -196,36 +196,36 @@ export default {
 如果 CSS 可以做到，就不要使用 JS
 建议并适当缩写值，提高可读性，特殊情况除外
 使用单个字母加上"-"为前缀
-布局（grid）（.g-）；
-模块（module）（.m-）；
-元件（unit）（.u-）；
-功能（function）（.f-）；
-皮肤（skin）（.s-）；
-状态（.z-）。
+    布局（grid）（.g-）；
+    模块（module）（.m-）；
+    元件（unit）（.u-）；
+    功能（function）（.f-）；
+    皮肤（skin）（.s-）；
+    状态（.z-）。
 
 ### 代码提交规范：
 #### 1. commit message 
 commit message 保持 [关键字]-[jiraId/taskId/featureDes]:空格[内容]
 关键字说明：
-fu  //业务需求
-ht  //补丁
-ot  // 其他需求
+    fu  //业务需求
+    ht  //补丁
+    ot  // 其他需求
 举例：fu-0001: commit verification module
 
 #### 2. 分支规范
 分支命名规范： [关键字]-[feature]-[date]
 核心分支：
-master：  线上代码版本，不允许直接操作push以及-f push。只允许测试完成代码merge到此分支。
-release： 预发布代码版本，测试通过且code review通过的代码可以合并到此分支。
-develop： 测试分支，代码通过自测，且单元测试通过后合并到此分支。
+    master：  线上代码版本，不允许直接操作push以及-f push。只允许测试完成代码merge到此分支。
+    release： 预发布代码版本，测试通过且code review通过的代码可以合并到此分支。
+    develop： 测试分支，代码通过自测，且单元测试通过后合并到此分支。
 注意：核心分支不允许直接提交代码，只允许合并代码。
 核心代码每周三周一自动进行版本回退，保持与master一致。所以周一早上周三早上需要重新合并分支。
 这么做的目的是尽早暴露代码漏测，漏提问题，降低上线风险。
 
 开发分支：
-feature-getListError / feature-getListError-0910
+    feature-getListError / feature-getListError-0910
 关键字：
-feature
-hotfix
+    feature
+    hotfix
 注意：开发分支上允许所有操作，保证小步快走，完成最小功能就提交代码。保证不会因为本地误操作导致代码丢失。
 开发分支完成后运行测试命令进行代码检查，检查通过后合并到 develop 进行提测。
