@@ -5,7 +5,7 @@
       <router-link to="/about">About</router-link>
     </div>
     <transition :name="transitionName">
-      <router-view/>
+      <router-view class="child-view"/>
     </transition>
   </div>
 </template>
